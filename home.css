@@ -1,0 +1,792 @@
+/* -------- Todo el Cuerpo HTML---------- */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration:none;
+    font-family: "Roboto Mono", monospace;
+}
+body{
+    background-color:#0B1C26;
+    margin:0;
+    
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 10px; 
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+    border-radius: 5px; 
+}
+
+::-webkit-scrollbar-thumb {
+    background: gray; 
+    border-radius: 5px;
+    border: 2px solid #f1f1f1; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #0056b3;
+}
+
+::-webkit-scrollbar-corner {
+    background: #f1f1f1;
+}
+
+
+/* --------- Header --------- */
+
+header{
+        color: white;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        font-weight: 600;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100%;
+        background-color: #0B1C26; 
+        z-index: 100;
+        padding: 15px 3%;
+        height: 70px;
+}
+main {
+    padding-top: 70px; /* Coincide con la altura del header */
+}
+
+.logo{
+    height: 5rem;
+    width: auto;
+}
+nav ul{
+    list-style-type: none;
+    display: flex ;
+    gap: 5rem;
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    position: relative; 
+}
+nav ul li{
+    margin-top: 1.2rem;
+}
+nav ul li a{
+    text-decoration: none;
+    color:white;
+    font-size: 1rem;
+    margin-top: -9rem;
+    font-family: "League Spartan", sans-serif;
+    font-weight: 600; 
+    padding: 2px 0; 
+    color: white; 
+    text-decoration: none; 
+    font-weight: 600; 
+    padding: 2px 0; 
+    position: relative; 
+}
+.navContact{
+    height: 9rem;
+    width: auto;
+    margin-right: 2rem;
+}
+
+/*Boton de contacto*/
+
+.button {
+    display: inline-block; 
+    border-radius: 5px; 
+    padding: 12.8px 15px; 
+    transition: background-color 0.3s ease, color 0.3s ease; 
+    background-color: #F2441D;
+    height: 2.8rem;
+}
+
+/* Estilo  encima del botón */
+
+.button:hover {
+    background-color: white; 
+    color: #0B1C26; 
+}
+
+nav ul li a:not(.button)::after {
+    content: '';
+    position: absolute;
+    bottom: -5px; 
+    left: 0;
+    height: 2px; 
+    background-color: #4CAF50; 
+    width: 100%; 
+    transform: scaleX(0); 
+    transition: transform 0.4s ease; 
+}
+
+nav ul li a:not(.button):hover::after {
+    transform: scaleX(1); 
+}
+
+nav ul li a.button::after {
+    display: none; 
+}
+
+
+@media (max-width: 768px) {
+    header {
+        height: 6rem; 
+        padding: 0px 2%; 
+    }
+
+    .logo {
+        display: none; /* Oculta el logo */
+    }
+
+    nav ul {
+        gap: 1rem; /* Reduce el espacio entre los elementos del nav */
+        flex-direction: row; /* Asegura que los elementos estén en fila */
+        justify-content: center; /* Centra los elementos en el nav */
+        margin: 0; /* Elimina el margen del ul */
+        padding: 0; /* Elimina el padding del ul */
+    }
+
+    nav ul li {
+        margin-top: 0; /* Elimina el margen superior */
+    }
+
+    nav ul li a {
+        font-size: 1rem; /* Mantiene el tamaño de fuente original */
+        text-align: center; /* Alinea el texto al centro */
+        padding: 5px 10px; /* Añade espaciado interno a los enlaces */
+    }
+    nav ul{
+        gap: 3rem; /* Establece un gap de 5rem entre los elementos */
+    }
+}
+
+/* ------- Fin del Header -------- */
+
+
+/* --Section Hero --*/
+
+
+.container {
+    display: flex;
+    width: 100%;
+    align-items: stretch; 
+    justify-content: space-between;
+}
+
+/* Estilo para la sección hero */
+#hero {
+    display: flex; 
+    align-items: center; 
+    box-sizing: border-box;
+    justify-content: center; 
+    background-color: #0B1C26;
+    box-sizing: border-box;
+    order: 2; 
+    width: 100%;
+    height: 92vh;
+    background-color: #0B1C26;
+    padding: 40px;
+    color: white;
+    box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.5);
+}
+
+.icons {
+    order: 1; 
+    width: 5%; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+    justify-content: center; 
+    background-color: #0B1C26;
+    box-sizing: border-box;
+    margin-top: -6rem;
+    box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.5);
+}
+
+/* Iconos individuales */
+.icons i {
+    display: block;
+    margin: 15px 0;
+    font-size: 27px;
+    transition: all 0.5s ease;
+    color:white;
+    margin-top: 4rem; 
+}
+
+.icons i:hover {
+    color: white;
+    transform: translateY(-5px);
+}
+
+/* Estilo para la imagen de perfil */
+.profile-image {
+    width: 850px; 
+    height: auto; 
+    margin-top: -4rem;
+    margin-right:rem;
+    max-width: 100%; 
+}
+/* Estilo para el contenedor de texto */
+
+.text-content {
+    display: flex;
+    flex-direction: column; 
+    white-space: nowrap;
+    margin-left: 1rem;
+    margin-top: -3rem;
+    font-size: -2vw; 
+}
+.text-content h1{
+  font-size: 5rem;
+  font-family: "Anton", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.text-content h5{
+    color:#17BF71;
+    font-size: 1.5rem;
+    margin-bottom: -1rem;
+}
+
+.text-content p{
+    font-size: 1rem;
+}
+.Mi-perfil{
+    padding: 0;
+}
+
+/* Contenedor para los botones */
+
+.button-group {
+    display: flex;
+    gap: 15px; 
+    margin-top: 25px; /
+}
+
+/* Estilos para los botones */
+
+.button-cv {
+    display: inline-block;
+    background-color: #17BF71; 
+    border-radius: 5px;
+    padding: 15px 20px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 3.4rem;
+}
+
+/* Efecto hover */
+.button-cv:hover {
+    background-color: #2aa16a; /* Verde más oscuro */
+    transform: scale(1.1); 
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2); 
+}
+
+/* Efecto de presión */
+.button-cv:active {
+    transform: scale(1.05);
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.15); 
+}
+
+
+@media (max-width: 768px) { 
+    #hero {
+        display: grid;
+        grid-template-rows: auto 1fr; 
+        justify-items: center; 
+        text-align: center; 
+    }
+
+    .text-content {
+        order: 1; 
+    }
+
+    .Mi-perfil {
+        order: 0; 
+        margin-bottom: 2rem; 
+        margin-top: 5rem;
+    }
+
+    .button-group {
+        display: flex; 
+        justify-content: center; 
+        gap: 1rem; 
+    }
+    
+    .icons {
+        display: flex; 
+        justify-content: center; 
+        margin-top: 1rem; 
+        width: 7rem;
+    }
+
+    .icons a {
+        margin: 0 5px; 
+    }
+}
+
+
+
+/* Media query para  móviles */
+@media (max-width: 768px) {
+    /* Oculta la barra de iconos de mis redes sociales */
+    .icons {
+        display: none; /* Oculta la barra de iconos en móviles */
+    }
+
+    .container {
+        flex-direction: column; 
+        align-items: center; 
+        justify-content: center; 
+        padding: 0 15px; 
+    }
+
+    /* Estilo para la sección hero */
+    #hero {
+        padding: 20px; 
+        height: auto; 
+    }
+
+    /* Estilo para el logo */
+    .logo {
+        max-width: 100%; 
+        height: auto; 
+    }
+
+    /* Estilo para el contenedor de texto */
+    .text-content {
+        margin: 1rem 0;
+        text-align: center; 
+        padding: 0 20px; 
+    }
+
+    /* Ajustes de tamaño de fuente */
+    .text-content h1 {
+        font-size: 3rem; 
+    }
+    .text-content h5 {
+        font-size: 1.2rem; 
+        margin-bottom: 0.2rem;
+    }
+    
+    /* Estilo para el texto <p> */
+    .text-content p {
+        font-size: 0.9rem; 
+        max-width: 90%; 
+        margin: 0 auto; 
+        line-height: 1.5; 
+        overflow-wrap: break-word; 
+        word-wrap: break-word; 
+        white-space: normal; 
+        padding: 0 10px; 
+    }
+
+    /* Estilo para los botones */
+    .button-group {
+        flex-direction: column; 
+        gap: 10px; 
+        margin-top: 10px; 
+        width: auto;
+        padding: 0; 
+    }
+
+    /* Estilo para los botones */
+    .button-cv {
+        width: 80%; 
+        max-width: 300px; 
+        padding: 10px; 
+        height: auto; 
+        margin: 0 auto; 
+        text-align: center; 
+    }
+}
+
+/* Nueva seccion Skills -.--.-.-.-.-.--.-.---..-*/
+
+
+
+#skills {
+    background-color: #0B1C26; 
+    padding: 50px 0; 
+    color: #fff; 
+    text-align: center;
+    padding: 40px;
+    box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.5);
+    height: auto;
+}
+
+h1 {
+    text-align: center; 
+    margin-bottom: 30px; 
+}
+
+/* Contenedor de habilidades */
+.skills-container {
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+    max-width: 1200px; 
+    margin: 0 auto; 
+}
+
+/* Estilo para cada caja de habilidad */
+.skill {
+    background-color: rgba(255, 255, 255, 0.15); 
+    backdrop-filter: blur(10px); 
+    border-radius: 10px; 
+    width: calc(25% - 20px); 
+    margin: 50px; 
+    padding: 30px; 
+    text-align: center; 
+    margin:10px; 
+    transition: transform 0.3s, box-shadow 0.3s;  
+}
+
+/* Efecto al pasar el ratón sobre las cajas */
+.skill:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); 
+}
+
+.skill-logo {
+    width: 80px; 
+    height: auto; 
+    margin-bottom: 10px; 
+}
+
+#skills h1 {
+    font-size: 2.5rem;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    margin-bottom: 10px;
+    animation: fadeIn 1s ease-in;
+    margin-top: 3rem;
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    color: #e0e0e0;
+    margin-bottom: 20px;
+}
+
+.quote {
+    font-size: 1.2rem;
+    color: #d1d1d1;
+    font-style: italic;
+    margin-bottom: 30px;
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-left: 4px solid #fff;
+    display: inline-block;
+    animation: fadeIn 1.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+@media (max-width: 768px) { 
+    .skills-container {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .skill {
+        width: 80%; 
+        margin: 20px 0; 
+        padding: 40px; 
+    }
+}
+
+/*Fin section skills */
+
+
+/*Inicia Projects*/
+
+
+#projects h1 {
+    font-size: 2.5rem;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    margin-bottom: 10px;
+    animation: fadeIn 1s ease-in;
+    margin-top: 3rem;
+}
+
+/* Estilo general para la sección */
+#projects {
+    padding: 50px 0;
+    background-color: #0B1C26;
+    text-align: center;
+    height: auto; 
+}
+
+/* Contenedor de proyectos */
+.projects-container {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 100%; 
+    padding: 0 50px; 
+    box-sizing: border-box;
+}
+
+/* Estilos de cada proyecto */
+.project {
+    flex: 1 1 300px; 
+    max-width: 100%; 
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.4s ease, box-shadow 0.4s ease, opacity 0.4s ease;
+    position: relative;
+    min-height: 500px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.project:hover {
+    transform: rotate(3deg) translateY(-10px);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2), 0px 0px 20px rgba(0, 180, 255, 0.5);
+}
+
+.projects-container:hover .project {
+    opacity: 0.5;
+}
+
+.projects-container .project:hover {
+    opacity: 1; 
+}
+
+/* Estilo del enlace en cada proyecto */
+.project a {
+    color: inherit;
+    text-decoration: none;
+    display: block;
+    height: 100%;
+}
+
+/* Imagen dentro del proyecto */
+.project-image {
+    width: 100%;
+    height: 60%;
+    object-fit: cover;
+}
+
+/* Información del proyecto */
+.project-info {
+    padding: 15px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 10px; 
+    flex-grow: 1;
+}
+
+/* Iconos */
+.iconos {
+    margin-top: auto; 
+}
+
+.icon {
+    font-size: 1.5em;
+    margin-right: 8px;
+    color: #333;
+}
+
+/* Efecto de iluminación al pasar el ratón */
+.project:hover::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border-radius: 15px;
+    border: 2px solid rgba(0, 180, 255, 0.5);
+    z-index: -1;
+}
+
+/* Sectio contacccccccccccccccccccto*/
+
+/* Estilo general para la sección de contacto */
+#contact {
+    background-color: #0B1C26; 
+    color: #fff; 
+    padding: 40px 20px; 
+    text-align: center; 
+    height: auto;
+}
+
+/* Título de la sección */
+#contact h1 {
+    margin-bottom: 30px; 
+    font-size: 2.5rem; 
+}
+
+.contacto-parrafo{
+    margin-top: 1rem;
+}
+
+/* Contenedor de las columnas */
+.contact-container {
+    display: flex; 
+    justify-content: space-between; 
+    margin: 0 auto; 
+    max-width: 1200px; 
+}
+
+/* Estilo para cada columna */
+.contact-column {
+    flex: 1; 
+    margin: 20px; 
+    background-color: rgba(255, 255, 255, 0.1); 
+    border-radius: 10px; 
+    padding: 30px; 
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); 
+    text-align: left; 
+}
+
+.column h2, .column h3 {
+    margin-top: 20px; 
+    margin-bottom: 15px; 
+}
+
+/* Estilo para las habilidades y certificaciones */
+.skills-icons {
+    display: flex; 
+    justify-content: space-around; 
+    margin-top: 2rem;
+    margin-bottom: 1rem; 
+}
+
+/* Estilo para las habilidades individuales */
+.skill-contacto {
+    text-align: center; 
+}
+
+.skill-contacto i {
+    font-size: 40px; 
+    color: #ffffff; 
+}
+
+.skill-contacto span {
+    display: block; 
+    margin-top: 10px; 
+}
+
+/* Estilo para los iconos de contacto */
+.iconos-footer {
+    display: flex; 
+    justify-content: center; 
+    gap: 20px; 
+    margin-top: 20px; 
+}
+
+/* Estilo para los iconos */
+.icon {
+    font-size: 30px; 
+
+}
+
+/* Estilo para las filas del formulario */
+.form-row {
+    display: flex; 
+    justify-content: space-between; 
+    margin-bottom: 2rem; 
+}
+.NombreyCorreo{
+    margin-right: 0.8rem;
+    margin-top: 1rem;
+}
+.cajaDemensaje{
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.iconts{
+    color: white;
+    font-size: 2rem;
+}
+
+/* Estilo para las etiquetas y campos de formulario */
+input, 
+textarea {
+    width: 100%; 
+    padding: 12px; 
+    border: none; 
+    border-radius: 5px; 
+    background-color: rgba(255, 255, 255, 0.2); 
+    color: #fff;
+    transition: background-color 0.3s; 
+}
+
+textarea {
+    resize: none;
+}
+
+
+input:focus, 
+textarea:focus {
+    background-color: rgba(255, 255, 255, 0.3); 
+}
+
+/* Botón de envío */
+button {
+    padding: 12px 20px;
+    border: none; 
+    border-radius: 5px; 
+    background-color: #007BFF; 
+    color: #fff; 
+    cursor: pointer; 
+    transition: background-color 0.3s; 
+}
+
+button:hover {
+    background-color: #0056b3; /* Color de fondo al pasar el ratón */
+}
+
+/* Nota en el pie de sección */
+.footer-note {
+    margin-top: 30px; 
+    font-size: 1rem; 
+    color: #ccc;
+}
+
+@media (max-width: 768px) { /* Ajusta el ancho según necesites */
+    .contact-container {
+        flex-direction: column; /* Cambia la dirección a columna para apilar las columnas */
+        align-items: stretch; /* Asegura que las columnas ocupen el ancho completo */
+    }
+
+    .contact-column {
+        width: 100%; /* Ancho completo para las columnas */
+        margin: 1rem 0; /* Margen superior e inferior de 1rem */
+        padding: 20px; /* Aumenta el relleno interno si es necesario */
+    }
+}
